@@ -36,37 +36,58 @@ loop
 
   ;upgrade downdraft
   click, 254 317 ;tower
+  sleep, 100
   click, 2097 638 ;pursuit
+  sleep, 100
   click, 2097 638
+  sleep, 100
   click, 2090 833 ;downdraft
+  sleep, 100
   click, 2090 833
+  sleep, 100
   click, 2090 833
   sleep, 1000
 
   ;upgrade moab shove
   click, 453 319 ;tower
+  sleep, 100
   click, 2097 638 ;pursuit
+  sleep, 100
   click, 2097 638
+  sleep, 100
   click, 2068 1054 ;moab shove
+  sleep, 100
   click, 2068 1054
+  sleep, 100
   click, 2068 1054
   sleep, 1000
 
   ;upgrade shimmer
   click, 256 493 ;tower
+  sleep, 100
   click, 2090 833 ;wall of fire
+  sleep, 100
   click, 2090 833
+  sleep, 100
   click, 2068 1054 ;shimmer
+  sleep, 100
   click, 2068 1054
+  sleep, 100
   click, 2068 1054
+  sleep, 100
   sleep, 1000
 
   ;upgrade brew
   click, 356, 490 ;tower
+  sleep, 100
   click, 2097 638 ;brew
+  sleep, 100
   click, 2097 638
+  sleep, 100
   click, 2097 638
+  sleep, 100
   click, 2068 1054 ;faster throwing
+  sleep, 100
   click, 2068 1054
   sleep, 1000
 
@@ -75,22 +96,26 @@ loop
   click, 2442 1356
 
   ;lvl up
-  loop{
-    PixelGetColor, pixel1, 1284, 673, RGB
+  loop
+  {
+    PixelGetColor, pixel1, 1282, 665, RGB
     PixelGetColor, pixel2, 1633, 210, RGB
-    if (pixel2 = 0xFFFFFF)
+    if (pixel2 = 0xFFFFFF || pixel1 = 0x00CBDE)
     {
-      click, 1055 1128
-      break
-    } else if (pixel1 = 0x08C8C9)
-    {
-    click, 2442 1356
-    sleep, 500
-    click, 2442 1356
-    sleep, 500
-    click, 2442 1356
+      click, 2442 1356
+      sleep, 500
+      click, 2442 1356
+      sleep, 500
+      click, 2442 1356
+      if (pixel2 = 0xFFFFFF)
+      {
+        click, 1055 1128
+        sleep 4000
+        break 2
+      }
     }
-  ???
+    break
   }
+  ???
 }
 ^x::ExitApp
