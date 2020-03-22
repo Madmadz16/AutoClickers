@@ -1,0 +1,102 @@
+^z::
+
+loop
+{
+  ;map and game mode
+  click, 1114 1247
+  sleep, 500
+  click, 685 366
+  sleep, 500
+  click, 858 563
+  sleep, 500
+  click, 1672 606
+  sleep, 5000
+  click, 500 500
+  sleep 500
+  MouseMove, 2358, 713,
+  sleep, 100
+
+  ;towers
+  loop 7
+  {
+    click, WheelDown
+  }
+  click, 2418 601 ;helli 1
+  click, 254 317
+  sleep, 500
+  click, 2418 601 ;helli 2
+  click, 453 319
+  sleep, 500
+  click, 2429 791 ;wizard
+  click, 256 493
+  sleep, 500
+  click, 2288, 1139 ;alcem
+  click, 415, 485
+  sleep, 1000
+
+  ;upgrade downdraft
+  click, 254 317 ;tower
+  click, 2097 638 ;pursuit
+  click, 2097 638
+  click, 2090 833 ;downdraft
+  click, 2090 833
+  click, 2090 833
+  sleep, 1000
+
+  ;upgrade moab shove
+  click, 453 319 ;tower
+  click, 2097 638 ;pursuit
+  click, 2097 638
+  click, 2068 1054 ;moab shove
+  click, 2068 1054
+  click, 2068 1054
+  sleep, 1000
+
+  ;upgrade shimmer
+  click, 256 493 ;tower
+  click, 2090 833 ;wall of fire
+  click, 2090 833
+  click, 2068 1054 ;shimmer
+  click, 2068 1054
+  click, 2068 1054
+  sleep, 1000
+
+  ;upgrade brew
+  click, 356, 490 ;tower
+  click, 2097 638 ;brew
+  click, 2097 638
+  click, 2097 638
+  click, 2068 1054 ;faster throwing
+  click, 2068 1054
+  sleep, 1000
+
+  ;play
+  click, 2442 1356
+  click, 2442 1356
+
+  sleep 1000000
+  click, 1055 1128
+  ???
+/*
+  ;lvl up
+  loop{
+    PixelGetColor, pixel1, 1284, 673, RGB
+    if (pixel1 = 0x08C8C9)
+    {
+    	click, 2442 1356
+      sleep, 500
+      click, 2442 1356
+      sleep, 500
+      click, 2442 1356
+    }
+    PixelGetColor, pixel2, 1633, 210, RGB
+    if (pixel2 = 0xFFFFFF)
+    {
+    break
+    }
+  ???
+  }
+*/
+
+}
+^x::ExitApp
