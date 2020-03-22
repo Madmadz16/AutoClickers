@@ -111,10 +111,9 @@ loop
       {
         click, 1055 1128
         sleep 4000
-        break 2
+        break 3
       }
     }
-    break
   }
   ???
 }
